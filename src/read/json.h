@@ -1,3 +1,4 @@
+#include <queue>
 #include "rapidjson/document.h"
 #include "pirf/pirf.pb.h"
 
@@ -137,11 +138,13 @@ void encode_array(ARRAY *array, Tuple::Body::ArrayPair::Array *dest_array){
 
 }
 
-Tuple encode(const char* source) {
+void encode(std::istream &in, std::queue<Tuple> &out) {
         Document document;
-        document.Parse(source);
         Tuple tuple;
-        encode_tuple(&document, &tuple);
-        return tuple;
-
+        for (std::string line; std::getline(in, line);) {
+                document.Parse(line.c_str());
+                encode_tuple(&document, &tuple);
+                out.push(tuple);
+                tuple.Clear();
+        }
 }
