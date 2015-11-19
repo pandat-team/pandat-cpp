@@ -1,0 +1,66 @@
+// Pandat Internal Representation Format (pirf)
+syntax = "proto3";
+message Tuple {
+        message Body {
+                enum Null {
+                        NULL_VALUE = 0;
+                }
+                message StringPair {
+                        string key = 1;
+                        string value = 2;
+                }
+                message IntPair {
+                        string key = 1;
+                        int64 value = 2;
+                }
+                message DoublePair {
+                        string key = 1;
+                        double value = 2;
+                }
+                message BoolPair {
+                        string key = 1;
+                        bool value = 2;
+                }
+                message TuplePair {
+                        string key = 1;
+                        Tuple value = 2;
+                }
+                message NullPair {
+                        string key = 1;
+                        Null value = 2;
+                }
+                message ArrayPair {
+                        message Array {
+                                message Element {
+                                        oneof content {
+                                                string string_content = 1;
+                                                Tuple tuple_content = 2;
+                                                int64 int_content = 4;
+                                                double double_content = 5;
+                                                bool bool_content = 6;
+                                                Null null_content = 7;
+                                                Array array_content = 8;
+                                        }
+
+                                }
+                                repeated Element element = 1;
+                        }
+                        string key = 1;
+                        Array value = 2;
+                }
+                oneof content {
+                        string string_content = 1;
+                        Tuple tuple_content = 2;
+                        StringPair string_pair_content = 3;
+                        IntPair int_pair_content = 4;
+                        DoublePair double_pair_content = 5;
+                        BoolPair bool_pair_content = 6;
+                        TuplePair tuple_pair_content = 7;
+                        NullPair null_pair_content = 8;
+                        ArrayPair array_pair_content = 9;
+                }
+        }
+        string tag = 1;
+        map<string, string> attr = 2;
+        repeated Body body = 3;
+}
