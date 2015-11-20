@@ -83,9 +83,14 @@ class Tuple_Body_StringPair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_StringPair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_StringPair* other);
   void Swap(Tuple_Body_StringPair* other);
 
   // implements Message ----------------------------------------------
@@ -112,6 +117,11 @@ class Tuple_Body_StringPair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_StringPair* other);
+  protected:
+  explicit Tuple_Body_StringPair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -137,6 +147,9 @@ class Tuple_Body_StringPair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional string value = 2;
   void clear_value();
@@ -148,11 +161,17 @@ class Tuple_Body_StringPair : public ::google::protobuf::Message {
   ::std::string* mutable_value();
   ::std::string* release_value();
   void set_allocated_value(::std::string* value);
+  ::std::string* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_value(
+      ::std::string* value);
 
   // @@protoc_insertion_point(class_scope:Tuple.Body.StringPair)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   ::google::protobuf::internal::ArenaStringPtr value_;
@@ -178,9 +197,14 @@ class Tuple_Body_IntPair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_IntPair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_IntPair* other);
   void Swap(Tuple_Body_IntPair* other);
 
   // implements Message ----------------------------------------------
@@ -207,6 +231,11 @@ class Tuple_Body_IntPair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_IntPair* other);
+  protected:
+  explicit Tuple_Body_IntPair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -232,6 +261,9 @@ class Tuple_Body_IntPair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional int64 value = 2;
   void clear_value();
@@ -243,6 +275,9 @@ class Tuple_Body_IntPair : public ::google::protobuf::Message {
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   ::google::protobuf::int64 value_;
@@ -268,9 +303,14 @@ class Tuple_Body_DoublePair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_DoublePair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_DoublePair* other);
   void Swap(Tuple_Body_DoublePair* other);
 
   // implements Message ----------------------------------------------
@@ -297,6 +337,11 @@ class Tuple_Body_DoublePair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_DoublePair* other);
+  protected:
+  explicit Tuple_Body_DoublePair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -322,6 +367,9 @@ class Tuple_Body_DoublePair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional double value = 2;
   void clear_value();
@@ -333,6 +381,9 @@ class Tuple_Body_DoublePair : public ::google::protobuf::Message {
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   double value_;
@@ -358,9 +409,14 @@ class Tuple_Body_BoolPair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_BoolPair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_BoolPair* other);
   void Swap(Tuple_Body_BoolPair* other);
 
   // implements Message ----------------------------------------------
@@ -387,6 +443,11 @@ class Tuple_Body_BoolPair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_BoolPair* other);
+  protected:
+  explicit Tuple_Body_BoolPair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -412,6 +473,9 @@ class Tuple_Body_BoolPair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional bool value = 2;
   void clear_value();
@@ -423,6 +487,9 @@ class Tuple_Body_BoolPair : public ::google::protobuf::Message {
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   bool value_;
@@ -448,9 +515,14 @@ class Tuple_Body_TuplePair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_TuplePair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_TuplePair* other);
   void Swap(Tuple_Body_TuplePair* other);
 
   // implements Message ----------------------------------------------
@@ -477,6 +549,11 @@ class Tuple_Body_TuplePair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_TuplePair* other);
+  protected:
+  explicit Tuple_Body_TuplePair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -502,20 +579,35 @@ class Tuple_Body_TuplePair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional .Tuple value = 2;
   bool has_value() const;
   void clear_value();
   static const int kValueFieldNumber = 2;
+  private:
+  void _slow_mutable_value();
+  void _slow_set_allocated_value(
+      ::google::protobuf::Arena* message_arena, ::Tuple** value);
+  ::Tuple* _slow_release_value();
+  public:
   const ::Tuple& value() const;
   ::Tuple* mutable_value();
   ::Tuple* release_value();
   void set_allocated_value(::Tuple* value);
+  ::Tuple* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_value(
+      ::Tuple* value);
 
   // @@protoc_insertion_point(class_scope:Tuple.Body.TuplePair)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   ::Tuple* value_;
@@ -541,9 +633,14 @@ class Tuple_Body_NullPair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_NullPair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_NullPair* other);
   void Swap(Tuple_Body_NullPair* other);
 
   // implements Message ----------------------------------------------
@@ -570,6 +667,11 @@ class Tuple_Body_NullPair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_NullPair* other);
+  protected:
+  explicit Tuple_Body_NullPair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -595,6 +697,9 @@ class Tuple_Body_NullPair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional .Tuple.Body.Null value = 2;
   void clear_value();
@@ -606,6 +711,9 @@ class Tuple_Body_NullPair : public ::google::protobuf::Message {
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   int value_;
@@ -631,20 +739,25 @@ class Tuple_Body_ArrayPair_Array_Element : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_ArrayPair_Array_Element& default_instance();
 
   enum ContentCase {
     kStringContent = 1,
     kTupleContent = 2,
-    kIntContent = 4,
-    kDoubleContent = 5,
-    kBoolContent = 6,
-    kNullContent = 7,
-    kArrayContent = 8,
+    kIntContent = 3,
+    kDoubleContent = 4,
+    kBoolContent = 5,
+    kNullContent = 6,
+    kArrayContent = 7,
     CONTENT_NOT_SET = 0,
   };
 
+  void UnsafeArenaSwap(Tuple_Body_ArrayPair_Array_Element* other);
   void Swap(Tuple_Body_ArrayPair_Array_Element* other);
 
   // implements Message ----------------------------------------------
@@ -671,6 +784,11 @@ class Tuple_Body_ArrayPair_Array_Element : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_ArrayPair_Array_Element* other);
+  protected:
+  explicit Tuple_Body_ArrayPair_Array_Element(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -699,60 +817,81 @@ class Tuple_Body_ArrayPair_Array_Element : public ::google::protobuf::Message {
   ::std::string* mutable_string_content();
   ::std::string* release_string_content();
   void set_allocated_string_content(::std::string* string_content);
+  ::std::string* unsafe_arena_release_string_content();
+  void unsafe_arena_set_allocated_string_content(
+      ::std::string* string_content);
 
   // optional .Tuple tuple_content = 2;
   bool has_tuple_content() const;
   void clear_tuple_content();
   static const int kTupleContentFieldNumber = 2;
+  private:
+  void _slow_mutable_tuple_content();
+  void _slow_set_allocated_tuple_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple** tuple_content);
+  ::Tuple* _slow_release_tuple_content();
+  public:
   const ::Tuple& tuple_content() const;
   ::Tuple* mutable_tuple_content();
   ::Tuple* release_tuple_content();
   void set_allocated_tuple_content(::Tuple* tuple_content);
+  ::Tuple* unsafe_arena_release_tuple_content();
+  void unsafe_arena_set_allocated_tuple_content(
+      ::Tuple* tuple_content);
 
-  // optional int64 int_content = 4;
+  // optional int64 int_content = 3;
   private:
   bool has_int_content() const;
   public:
   void clear_int_content();
-  static const int kIntContentFieldNumber = 4;
+  static const int kIntContentFieldNumber = 3;
   ::google::protobuf::int64 int_content() const;
   void set_int_content(::google::protobuf::int64 value);
 
-  // optional double double_content = 5;
+  // optional double double_content = 4;
   private:
   bool has_double_content() const;
   public:
   void clear_double_content();
-  static const int kDoubleContentFieldNumber = 5;
+  static const int kDoubleContentFieldNumber = 4;
   double double_content() const;
   void set_double_content(double value);
 
-  // optional bool bool_content = 6;
+  // optional bool bool_content = 5;
   private:
   bool has_bool_content() const;
   public:
   void clear_bool_content();
-  static const int kBoolContentFieldNumber = 6;
+  static const int kBoolContentFieldNumber = 5;
   bool bool_content() const;
   void set_bool_content(bool value);
 
-  // optional .Tuple.Body.Null null_content = 7;
+  // optional .Tuple.Body.Null null_content = 6;
   private:
   bool has_null_content() const;
   public:
   void clear_null_content();
-  static const int kNullContentFieldNumber = 7;
+  static const int kNullContentFieldNumber = 6;
   ::Tuple_Body_Null null_content() const;
   void set_null_content(::Tuple_Body_Null value);
 
-  // optional .Tuple.Body.ArrayPair.Array array_content = 8;
+  // optional .Tuple.Body.ArrayPair.Array array_content = 7;
   bool has_array_content() const;
   void clear_array_content();
-  static const int kArrayContentFieldNumber = 8;
+  static const int kArrayContentFieldNumber = 7;
+  private:
+  void _slow_mutable_array_content();
+  void _slow_set_allocated_array_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_ArrayPair_Array** array_content);
+  ::Tuple_Body_ArrayPair_Array* _slow_release_array_content();
+  public:
   const ::Tuple_Body_ArrayPair_Array& array_content() const;
   ::Tuple_Body_ArrayPair_Array* mutable_array_content();
   ::Tuple_Body_ArrayPair_Array* release_array_content();
   void set_allocated_array_content(::Tuple_Body_ArrayPair_Array* array_content);
+  ::Tuple_Body_ArrayPair_Array* unsafe_arena_release_array_content();
+  void unsafe_arena_set_allocated_array_content(
+      ::Tuple_Body_ArrayPair_Array* array_content);
 
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:Tuple.Body.ArrayPair.Array.Element)
@@ -770,6 +909,9 @@ class Tuple_Body_ArrayPair_Array_Element : public ::google::protobuf::Message {
   inline void clear_has_content();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   union ContentUnion {
     ContentUnion() {}
@@ -805,9 +947,14 @@ class Tuple_Body_ArrayPair_Array : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_ArrayPair_Array& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_ArrayPair_Array* other);
   void Swap(Tuple_Body_ArrayPair_Array* other);
 
   // implements Message ----------------------------------------------
@@ -834,6 +981,11 @@ class Tuple_Body_ArrayPair_Array : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_ArrayPair_Array* other);
+  protected:
+  explicit Tuple_Body_ArrayPair_Array(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -867,6 +1019,9 @@ class Tuple_Body_ArrayPair_Array : public ::google::protobuf::Message {
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::RepeatedPtrField< ::Tuple_Body_ArrayPair_Array_Element > element_;
   mutable int _cached_size_;
@@ -891,9 +1046,14 @@ class Tuple_Body_ArrayPair : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body_ArrayPair& default_instance();
 
+  void UnsafeArenaSwap(Tuple_Body_ArrayPair* other);
   void Swap(Tuple_Body_ArrayPair* other);
 
   // implements Message ----------------------------------------------
@@ -920,6 +1080,11 @@ class Tuple_Body_ArrayPair : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body_ArrayPair* other);
+  protected:
+  explicit Tuple_Body_ArrayPair(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -947,20 +1112,35 @@ class Tuple_Body_ArrayPair : public ::google::protobuf::Message {
   ::std::string* mutable_key();
   ::std::string* release_key();
   void set_allocated_key(::std::string* key);
+  ::std::string* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::std::string* key);
 
   // optional .Tuple.Body.ArrayPair.Array value = 2;
   bool has_value() const;
   void clear_value();
   static const int kValueFieldNumber = 2;
+  private:
+  void _slow_mutable_value();
+  void _slow_set_allocated_value(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_ArrayPair_Array** value);
+  ::Tuple_Body_ArrayPair_Array* _slow_release_value();
+  public:
   const ::Tuple_Body_ArrayPair_Array& value() const;
   ::Tuple_Body_ArrayPair_Array* mutable_value();
   ::Tuple_Body_ArrayPair_Array* release_value();
   void set_allocated_value(::Tuple_Body_ArrayPair_Array* value);
+  ::Tuple_Body_ArrayPair_Array* unsafe_arena_release_value();
+  void unsafe_arena_set_allocated_value(
+      ::Tuple_Body_ArrayPair_Array* value);
 
   // @@protoc_insertion_point(class_scope:Tuple.Body.ArrayPair)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr key_;
   ::Tuple_Body_ArrayPair_Array* value_;
@@ -986,6 +1166,10 @@ class Tuple_Body : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple_Body& default_instance();
 
@@ -1002,6 +1186,7 @@ class Tuple_Body : public ::google::protobuf::Message {
     CONTENT_NOT_SET = 0,
   };
 
+  void UnsafeArenaSwap(Tuple_Body* other);
   void Swap(Tuple_Body* other);
 
   // implements Message ----------------------------------------------
@@ -1028,6 +1213,11 @@ class Tuple_Body : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple_Body* other);
+  protected:
+  explicit Tuple_Body(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -1087,78 +1277,153 @@ class Tuple_Body : public ::google::protobuf::Message {
   ::std::string* mutable_string_content();
   ::std::string* release_string_content();
   void set_allocated_string_content(::std::string* string_content);
+  ::std::string* unsafe_arena_release_string_content();
+  void unsafe_arena_set_allocated_string_content(
+      ::std::string* string_content);
 
   // optional .Tuple tuple_content = 2;
   bool has_tuple_content() const;
   void clear_tuple_content();
   static const int kTupleContentFieldNumber = 2;
+  private:
+  void _slow_mutable_tuple_content();
+  void _slow_set_allocated_tuple_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple** tuple_content);
+  ::Tuple* _slow_release_tuple_content();
+  public:
   const ::Tuple& tuple_content() const;
   ::Tuple* mutable_tuple_content();
   ::Tuple* release_tuple_content();
   void set_allocated_tuple_content(::Tuple* tuple_content);
+  ::Tuple* unsafe_arena_release_tuple_content();
+  void unsafe_arena_set_allocated_tuple_content(
+      ::Tuple* tuple_content);
 
   // optional .Tuple.Body.StringPair string_pair_content = 3;
   bool has_string_pair_content() const;
   void clear_string_pair_content();
   static const int kStringPairContentFieldNumber = 3;
+  private:
+  void _slow_mutable_string_pair_content();
+  void _slow_set_allocated_string_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_StringPair** string_pair_content);
+  ::Tuple_Body_StringPair* _slow_release_string_pair_content();
+  public:
   const ::Tuple_Body_StringPair& string_pair_content() const;
   ::Tuple_Body_StringPair* mutable_string_pair_content();
   ::Tuple_Body_StringPair* release_string_pair_content();
   void set_allocated_string_pair_content(::Tuple_Body_StringPair* string_pair_content);
+  ::Tuple_Body_StringPair* unsafe_arena_release_string_pair_content();
+  void unsafe_arena_set_allocated_string_pair_content(
+      ::Tuple_Body_StringPair* string_pair_content);
 
   // optional .Tuple.Body.IntPair int_pair_content = 4;
   bool has_int_pair_content() const;
   void clear_int_pair_content();
   static const int kIntPairContentFieldNumber = 4;
+  private:
+  void _slow_mutable_int_pair_content();
+  void _slow_set_allocated_int_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_IntPair** int_pair_content);
+  ::Tuple_Body_IntPair* _slow_release_int_pair_content();
+  public:
   const ::Tuple_Body_IntPair& int_pair_content() const;
   ::Tuple_Body_IntPair* mutable_int_pair_content();
   ::Tuple_Body_IntPair* release_int_pair_content();
   void set_allocated_int_pair_content(::Tuple_Body_IntPair* int_pair_content);
+  ::Tuple_Body_IntPair* unsafe_arena_release_int_pair_content();
+  void unsafe_arena_set_allocated_int_pair_content(
+      ::Tuple_Body_IntPair* int_pair_content);
 
   // optional .Tuple.Body.DoublePair double_pair_content = 5;
   bool has_double_pair_content() const;
   void clear_double_pair_content();
   static const int kDoublePairContentFieldNumber = 5;
+  private:
+  void _slow_mutable_double_pair_content();
+  void _slow_set_allocated_double_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_DoublePair** double_pair_content);
+  ::Tuple_Body_DoublePair* _slow_release_double_pair_content();
+  public:
   const ::Tuple_Body_DoublePair& double_pair_content() const;
   ::Tuple_Body_DoublePair* mutable_double_pair_content();
   ::Tuple_Body_DoublePair* release_double_pair_content();
   void set_allocated_double_pair_content(::Tuple_Body_DoublePair* double_pair_content);
+  ::Tuple_Body_DoublePair* unsafe_arena_release_double_pair_content();
+  void unsafe_arena_set_allocated_double_pair_content(
+      ::Tuple_Body_DoublePair* double_pair_content);
 
   // optional .Tuple.Body.BoolPair bool_pair_content = 6;
   bool has_bool_pair_content() const;
   void clear_bool_pair_content();
   static const int kBoolPairContentFieldNumber = 6;
+  private:
+  void _slow_mutable_bool_pair_content();
+  void _slow_set_allocated_bool_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_BoolPair** bool_pair_content);
+  ::Tuple_Body_BoolPair* _slow_release_bool_pair_content();
+  public:
   const ::Tuple_Body_BoolPair& bool_pair_content() const;
   ::Tuple_Body_BoolPair* mutable_bool_pair_content();
   ::Tuple_Body_BoolPair* release_bool_pair_content();
   void set_allocated_bool_pair_content(::Tuple_Body_BoolPair* bool_pair_content);
+  ::Tuple_Body_BoolPair* unsafe_arena_release_bool_pair_content();
+  void unsafe_arena_set_allocated_bool_pair_content(
+      ::Tuple_Body_BoolPair* bool_pair_content);
 
   // optional .Tuple.Body.TuplePair tuple_pair_content = 7;
   bool has_tuple_pair_content() const;
   void clear_tuple_pair_content();
   static const int kTuplePairContentFieldNumber = 7;
+  private:
+  void _slow_mutable_tuple_pair_content();
+  void _slow_set_allocated_tuple_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_TuplePair** tuple_pair_content);
+  ::Tuple_Body_TuplePair* _slow_release_tuple_pair_content();
+  public:
   const ::Tuple_Body_TuplePair& tuple_pair_content() const;
   ::Tuple_Body_TuplePair* mutable_tuple_pair_content();
   ::Tuple_Body_TuplePair* release_tuple_pair_content();
   void set_allocated_tuple_pair_content(::Tuple_Body_TuplePair* tuple_pair_content);
+  ::Tuple_Body_TuplePair* unsafe_arena_release_tuple_pair_content();
+  void unsafe_arena_set_allocated_tuple_pair_content(
+      ::Tuple_Body_TuplePair* tuple_pair_content);
 
   // optional .Tuple.Body.NullPair null_pair_content = 8;
   bool has_null_pair_content() const;
   void clear_null_pair_content();
   static const int kNullPairContentFieldNumber = 8;
+  private:
+  void _slow_mutable_null_pair_content();
+  void _slow_set_allocated_null_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_NullPair** null_pair_content);
+  ::Tuple_Body_NullPair* _slow_release_null_pair_content();
+  public:
   const ::Tuple_Body_NullPair& null_pair_content() const;
   ::Tuple_Body_NullPair* mutable_null_pair_content();
   ::Tuple_Body_NullPair* release_null_pair_content();
   void set_allocated_null_pair_content(::Tuple_Body_NullPair* null_pair_content);
+  ::Tuple_Body_NullPair* unsafe_arena_release_null_pair_content();
+  void unsafe_arena_set_allocated_null_pair_content(
+      ::Tuple_Body_NullPair* null_pair_content);
 
   // optional .Tuple.Body.ArrayPair array_pair_content = 9;
   bool has_array_pair_content() const;
   void clear_array_pair_content();
   static const int kArrayPairContentFieldNumber = 9;
+  private:
+  void _slow_mutable_array_pair_content();
+  void _slow_set_allocated_array_pair_content(
+      ::google::protobuf::Arena* message_arena, ::Tuple_Body_ArrayPair** array_pair_content);
+  ::Tuple_Body_ArrayPair* _slow_release_array_pair_content();
+  public:
   const ::Tuple_Body_ArrayPair& array_pair_content() const;
   ::Tuple_Body_ArrayPair* mutable_array_pair_content();
   ::Tuple_Body_ArrayPair* release_array_pair_content();
   void set_allocated_array_pair_content(::Tuple_Body_ArrayPair* array_pair_content);
+  ::Tuple_Body_ArrayPair* unsafe_arena_release_array_pair_content();
+  void unsafe_arena_set_allocated_array_pair_content(
+      ::Tuple_Body_ArrayPair* array_pair_content);
 
   ContentCase content_case() const;
   // @@protoc_insertion_point(class_scope:Tuple.Body)
@@ -1178,6 +1443,9 @@ class Tuple_Body : public ::google::protobuf::Message {
   inline void clear_has_content();
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   union ContentUnion {
     ContentUnion() {}
@@ -1215,9 +1483,14 @@ class Tuple : public ::google::protobuf::Message {
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const { return GetArenaNoVirtual(); }
+  inline void* GetMaybeArenaPointer() const {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Tuple& default_instance();
 
+  void UnsafeArenaSwap(Tuple* other);
   void Swap(Tuple* other);
 
   // implements Message ----------------------------------------------
@@ -1244,6 +1517,11 @@ class Tuple : public ::google::protobuf::Message {
   void SharedDtor();
   void SetCachedSize(int size) const;
   void InternalSwap(Tuple* other);
+  protected:
+  explicit Tuple(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
     return _internal_metadata_.arena();
@@ -1271,6 +1549,9 @@ class Tuple : public ::google::protobuf::Message {
   ::std::string* mutable_tag();
   ::std::string* release_tag();
   void set_allocated_tag(::std::string* tag);
+  ::std::string* unsafe_arena_release_tag();
+  void unsafe_arena_set_allocated_tag(
+      ::std::string* tag);
 
   // map<string, string> attr = 2;
   int attr_size() const;
@@ -1293,10 +1574,19 @@ class Tuple : public ::google::protobuf::Message {
   const ::google::protobuf::RepeatedPtrField< ::Tuple_Body >&
       body() const;
 
+  // optional bool poison = 4;
+  void clear_poison();
+  static const int kPoisonFieldNumber = 4;
+  bool poison() const;
+  void set_poison(bool value);
+
   // @@protoc_insertion_point(class_scope:Tuple)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool _is_default_instance_;
   ::google::protobuf::internal::ArenaStringPtr tag_;
   typedef ::google::protobuf::internal::MapEntryLite<
@@ -1311,6 +1601,7 @@ class Tuple : public ::google::protobuf::Message {
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       0 > attr_;
   ::google::protobuf::RepeatedPtrField< ::Tuple_Body > body_;
+  bool poison_;
   mutable int _cached_size_;
   friend void  protobuf_AddDesc_pirf_2eproto();
   friend void protobuf_AssignDesc_pirf_2eproto();
@@ -1329,36 +1620,44 @@ class Tuple : public ::google::protobuf::Message {
 
 // optional string key = 1;
 inline void Tuple_Body_StringPair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_StringPair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.StringPair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_StringPair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.StringPair.key)
 }
 inline void Tuple_Body_StringPair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.StringPair.key)
 }
-inline void Tuple_Body_StringPair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_StringPair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.StringPair.key)
 }
 inline ::std::string* Tuple_Body_StringPair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.StringPair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_StringPair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_StringPair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_StringPair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -1366,42 +1665,63 @@ inline void Tuple_Body_StringPair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.StringPair.key)
+}
+inline void Tuple_Body_StringPair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.StringPair.key)
 }
 
 // optional string value = 2;
 inline void Tuple_Body_StringPair::clear_value() {
-  value_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  value_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_StringPair::value() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.StringPair.value)
-  return value_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return value_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_StringPair::set_value(const ::std::string& value) {
   
-  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  value_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.StringPair.value)
 }
 inline void Tuple_Body_StringPair::set_value(const char* value) {
   
-  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  value_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.StringPair.value)
 }
-inline void Tuple_Body_StringPair::set_value(const char* value, size_t size) {
+inline void Tuple_Body_StringPair::set_value(const char* value,
+    size_t size) {
   
-  value_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  value_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.StringPair.value)
 }
 inline ::std::string* Tuple_Body_StringPair::mutable_value() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.StringPair.value)
-  return value_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return value_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_StringPair::release_value() {
   
-  return value_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return value_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_StringPair::unsafe_arena_release_value() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return value_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_StringPair::set_allocated_value(::std::string* value) {
   if (value != NULL) {
@@ -1409,7 +1729,20 @@ inline void Tuple_Body_StringPair::set_allocated_value(::std::string* value) {
   } else {
     
   }
-  value_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  value_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.StringPair.value)
+}
+inline void Tuple_Body_StringPair::unsafe_arena_set_allocated_value(
+    ::std::string* value) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (value != NULL) {
+    
+  } else {
+    
+  }
+  value_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.StringPair.value)
 }
 
@@ -1419,36 +1752,44 @@ inline void Tuple_Body_StringPair::set_allocated_value(::std::string* value) {
 
 // optional string key = 1;
 inline void Tuple_Body_IntPair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_IntPair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.IntPair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_IntPair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.IntPair.key)
 }
 inline void Tuple_Body_IntPair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.IntPair.key)
 }
-inline void Tuple_Body_IntPair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_IntPair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.IntPair.key)
 }
 inline ::std::string* Tuple_Body_IntPair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.IntPair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_IntPair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_IntPair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_IntPair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -1456,7 +1797,20 @@ inline void Tuple_Body_IntPair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.IntPair.key)
+}
+inline void Tuple_Body_IntPair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.IntPair.key)
 }
 
@@ -1480,36 +1834,44 @@ inline void Tuple_Body_IntPair::set_value(::google::protobuf::int64 value) {
 
 // optional string key = 1;
 inline void Tuple_Body_DoublePair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_DoublePair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.DoublePair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_DoublePair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.DoublePair.key)
 }
 inline void Tuple_Body_DoublePair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.DoublePair.key)
 }
-inline void Tuple_Body_DoublePair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_DoublePair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.DoublePair.key)
 }
 inline ::std::string* Tuple_Body_DoublePair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.DoublePair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_DoublePair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_DoublePair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_DoublePair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -1517,7 +1879,20 @@ inline void Tuple_Body_DoublePair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.DoublePair.key)
+}
+inline void Tuple_Body_DoublePair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.DoublePair.key)
 }
 
@@ -1541,36 +1916,44 @@ inline void Tuple_Body_DoublePair::set_value(double value) {
 
 // optional string key = 1;
 inline void Tuple_Body_BoolPair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_BoolPair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.BoolPair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_BoolPair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.BoolPair.key)
 }
 inline void Tuple_Body_BoolPair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.BoolPair.key)
 }
-inline void Tuple_Body_BoolPair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_BoolPair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.BoolPair.key)
 }
 inline ::std::string* Tuple_Body_BoolPair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.BoolPair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_BoolPair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_BoolPair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_BoolPair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -1578,7 +1961,20 @@ inline void Tuple_Body_BoolPair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.BoolPair.key)
+}
+inline void Tuple_Body_BoolPair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.BoolPair.key)
 }
 
@@ -1602,36 +1998,44 @@ inline void Tuple_Body_BoolPair::set_value(bool value) {
 
 // optional string key = 1;
 inline void Tuple_Body_TuplePair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_TuplePair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.TuplePair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_TuplePair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.TuplePair.key)
 }
 inline void Tuple_Body_TuplePair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.TuplePair.key)
 }
-inline void Tuple_Body_TuplePair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_TuplePair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.TuplePair.key)
 }
 inline ::std::string* Tuple_Body_TuplePair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.TuplePair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_TuplePair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_TuplePair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_TuplePair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -1639,7 +2043,20 @@ inline void Tuple_Body_TuplePair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.TuplePair.key)
+}
+inline void Tuple_Body_TuplePair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.TuplePair.key)
 }
 
@@ -1658,19 +2075,29 @@ inline const ::Tuple& Tuple_Body_TuplePair::value() const {
 inline ::Tuple* Tuple_Body_TuplePair::mutable_value() {
   
   if (value_ == NULL) {
-    value_ = new ::Tuple;
+    _slow_mutable_value();
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.TuplePair.value)
   return value_;
 }
 inline ::Tuple* Tuple_Body_TuplePair::release_value() {
   
-  ::Tuple* temp = value_;
-  value_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_value();
+  } else {
+    ::Tuple* temp = value_;
+    value_ = NULL;
+    return temp;
+  }
 }
-inline void Tuple_Body_TuplePair::set_allocated_value(::Tuple* value) {
-  delete value_;
+inline  void Tuple_Body_TuplePair::set_allocated_value(::Tuple* value) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete value_;
+  }
+  if (value != NULL) {
+    _slow_set_allocated_value(message_arena, &value);
+  }
   value_ = value;
   if (value) {
     
@@ -1686,36 +2113,44 @@ inline void Tuple_Body_TuplePair::set_allocated_value(::Tuple* value) {
 
 // optional string key = 1;
 inline void Tuple_Body_NullPair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_NullPair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.NullPair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_NullPair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.NullPair.key)
 }
 inline void Tuple_Body_NullPair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.NullPair.key)
 }
-inline void Tuple_Body_NullPair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_NullPair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.NullPair.key)
 }
 inline ::std::string* Tuple_Body_NullPair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.NullPair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_NullPair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_NullPair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_NullPair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -1723,7 +2158,20 @@ inline void Tuple_Body_NullPair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.NullPair.key)
+}
+inline void Tuple_Body_NullPair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.NullPair.key)
 }
 
@@ -1754,25 +2202,26 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_has_string_content() {
 }
 inline void Tuple_Body_ArrayPair_Array_Element::clear_string_content() {
   if (has_string_content()) {
-    content_.string_content_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    content_.string_content_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        GetArenaNoVirtual());
     clear_has_content();
   }
 }
 inline const ::std::string& Tuple_Body_ArrayPair_Array_Element::string_content() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.ArrayPair.Array.Element.string_content)
   if (has_string_content()) {
-    return content_.string_content_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    return content_.string_content_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
 }
 inline void Tuple_Body_ArrayPair_Array_Element::set_string_content(const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.Array.Element.string_content)
   if (!has_string_content()) {
     clear_content();
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  content_.string_content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  content_.string_content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.Array.Element.string_content)
 }
 inline void Tuple_Body_ArrayPair_Array_Element::set_string_content(const char* value) {
@@ -1781,18 +2230,20 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_string_content(const char* v
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  content_.string_content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(value));
+  content_.string_content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(value), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.ArrayPair.Array.Element.string_content)
 }
-inline void Tuple_Body_ArrayPair_Array_Element::set_string_content(const char* value, size_t size) {
+inline void Tuple_Body_ArrayPair_Array_Element::set_string_content(const char* value,
+                             size_t size) {
   if (!has_string_content()) {
     clear_content();
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  content_.string_content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size));
+  content_.string_content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size),
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.ArrayPair.Array.Element.string_content)
 }
 inline ::std::string* Tuple_Body_ArrayPair_Array_Element::mutable_string_content() {
@@ -1801,13 +2252,25 @@ inline ::std::string* Tuple_Body_ArrayPair_Array_Element::mutable_string_content
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
+  return content_.string_content_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_mutable:Tuple.Body.ArrayPair.Array.Element.string_content)
-  return content_.string_content_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Tuple_Body_ArrayPair_Array_Element::release_string_content() {
   if (has_string_content()) {
     clear_has_content();
-    return content_.string_content_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    return content_.string_content_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
+inline ::std::string* Tuple_Body_ArrayPair_Array_Element::unsafe_arena_release_string_content() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_string_content()) {
+    clear_has_content();
+    return content_.string_content_.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   } else {
     return NULL;
   }
@@ -1819,8 +2282,20 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_allocated_string_content(::s
   clear_content();
   if (string_content != NULL) {
     set_has_string_content();
-    content_.string_content_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-        string_content);
+    content_.string_content_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), string_content,
+        GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.Array.Element.string_content)
+}
+inline void Tuple_Body_ArrayPair_Array_Element::unsafe_arena_set_allocated_string_content(::std::string* string_content) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (!has_string_content()) {
+    content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  clear_content();
+  if (string_content) {
+    set_has_string_content();
+    content_.string_content_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), string_content, GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.Array.Element.string_content)
 }
@@ -1834,7 +2309,9 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_has_tuple_content() {
 }
 inline void Tuple_Body_ArrayPair_Array_Element::clear_tuple_content() {
   if (has_tuple_content()) {
-    delete content_.tuple_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.tuple_content_;
+    }
     clear_has_content();
   }
 }
@@ -1848,12 +2325,50 @@ inline ::Tuple* Tuple_Body_ArrayPair_Array_Element::mutable_tuple_content() {
   if (!has_tuple_content()) {
     clear_content();
     set_has_tuple_content();
-    content_.tuple_content_ = new ::Tuple;
+    content_.tuple_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.ArrayPair.Array.Element.tuple_content)
   return content_.tuple_content_;
 }
 inline ::Tuple* Tuple_Body_ArrayPair_Array_Element::release_tuple_content() {
+  if (has_tuple_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple* temp = new ::Tuple;
+      temp->MergeFrom(*content_.tuple_content_);
+      content_.tuple_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple* temp = content_.tuple_content_;
+      content_.tuple_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body_ArrayPair_Array_Element::set_allocated_tuple_content(::Tuple* tuple_content) {
+  clear_content();
+  if (tuple_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(tuple_content) == NULL) {
+      GetArenaNoVirtual()->Own(tuple_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(tuple_content)) {
+      ::Tuple* new_tuple_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple >(
+          GetArenaNoVirtual());
+      new_tuple_content->CopyFrom(*tuple_content);
+      tuple_content = new_tuple_content;
+    }
+    set_has_tuple_content();
+    content_.tuple_content_ = tuple_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.Array.Element.tuple_content)
+}
+inline  ::Tuple* Tuple_Body_ArrayPair_Array_Element::unsafe_arena_release_tuple_content() {
   if (has_tuple_content()) {
     clear_has_content();
     ::Tuple* temp = content_.tuple_content_;
@@ -1863,16 +2378,16 @@ inline ::Tuple* Tuple_Body_ArrayPair_Array_Element::release_tuple_content() {
     return NULL;
   }
 }
-inline void Tuple_Body_ArrayPair_Array_Element::set_allocated_tuple_content(::Tuple* tuple_content) {
+inline  void Tuple_Body_ArrayPair_Array_Element::unsafe_arena_set_allocated_tuple_content(::Tuple* tuple_content) {
   clear_content();
   if (tuple_content) {
     set_has_tuple_content();
     content_.tuple_content_ = tuple_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.Array.Element.tuple_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.ArrayPair.Array.Element.tuple_content)
 }
 
-// optional int64 int_content = 4;
+// optional int64 int_content = 3;
 inline bool Tuple_Body_ArrayPair_Array_Element::has_int_content() const {
   return content_case() == kIntContent;
 }
@@ -1901,7 +2416,7 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_int_content(::google::protob
   // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.Array.Element.int_content)
 }
 
-// optional double double_content = 5;
+// optional double double_content = 4;
 inline bool Tuple_Body_ArrayPair_Array_Element::has_double_content() const {
   return content_case() == kDoubleContent;
 }
@@ -1930,7 +2445,7 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_double_content(double value)
   // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.Array.Element.double_content)
 }
 
-// optional bool bool_content = 6;
+// optional bool bool_content = 5;
 inline bool Tuple_Body_ArrayPair_Array_Element::has_bool_content() const {
   return content_case() == kBoolContent;
 }
@@ -1959,7 +2474,7 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_bool_content(bool value) {
   // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.Array.Element.bool_content)
 }
 
-// optional .Tuple.Body.Null null_content = 7;
+// optional .Tuple.Body.Null null_content = 6;
 inline bool Tuple_Body_ArrayPair_Array_Element::has_null_content() const {
   return content_case() == kNullContent;
 }
@@ -1988,7 +2503,7 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_null_content(::Tuple_Body_Nu
   // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.Array.Element.null_content)
 }
 
-// optional .Tuple.Body.ArrayPair.Array array_content = 8;
+// optional .Tuple.Body.ArrayPair.Array array_content = 7;
 inline bool Tuple_Body_ArrayPair_Array_Element::has_array_content() const {
   return content_case() == kArrayContent;
 }
@@ -1997,7 +2512,9 @@ inline void Tuple_Body_ArrayPair_Array_Element::set_has_array_content() {
 }
 inline void Tuple_Body_ArrayPair_Array_Element::clear_array_content() {
   if (has_array_content()) {
-    delete content_.array_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.array_content_;
+    }
     clear_has_content();
   }
 }
@@ -2011,12 +2528,50 @@ inline ::Tuple_Body_ArrayPair_Array* Tuple_Body_ArrayPair_Array_Element::mutable
   if (!has_array_content()) {
     clear_content();
     set_has_array_content();
-    content_.array_content_ = new ::Tuple_Body_ArrayPair_Array;
+    content_.array_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_ArrayPair_Array >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.ArrayPair.Array.Element.array_content)
   return content_.array_content_;
 }
 inline ::Tuple_Body_ArrayPair_Array* Tuple_Body_ArrayPair_Array_Element::release_array_content() {
+  if (has_array_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_ArrayPair_Array* temp = new ::Tuple_Body_ArrayPair_Array;
+      temp->MergeFrom(*content_.array_content_);
+      content_.array_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_ArrayPair_Array* temp = content_.array_content_;
+      content_.array_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body_ArrayPair_Array_Element::set_allocated_array_content(::Tuple_Body_ArrayPair_Array* array_content) {
+  clear_content();
+  if (array_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(array_content) == NULL) {
+      GetArenaNoVirtual()->Own(array_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(array_content)) {
+      ::Tuple_Body_ArrayPair_Array* new_array_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_ArrayPair_Array >(
+          GetArenaNoVirtual());
+      new_array_content->CopyFrom(*array_content);
+      array_content = new_array_content;
+    }
+    set_has_array_content();
+    content_.array_content_ = array_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.Array.Element.array_content)
+}
+inline  ::Tuple_Body_ArrayPair_Array* Tuple_Body_ArrayPair_Array_Element::unsafe_arena_release_array_content() {
   if (has_array_content()) {
     clear_has_content();
     ::Tuple_Body_ArrayPair_Array* temp = content_.array_content_;
@@ -2026,13 +2581,13 @@ inline ::Tuple_Body_ArrayPair_Array* Tuple_Body_ArrayPair_Array_Element::release
     return NULL;
   }
 }
-inline void Tuple_Body_ArrayPair_Array_Element::set_allocated_array_content(::Tuple_Body_ArrayPair_Array* array_content) {
+inline  void Tuple_Body_ArrayPair_Array_Element::unsafe_arena_set_allocated_array_content(::Tuple_Body_ArrayPair_Array* array_content) {
   clear_content();
   if (array_content) {
     set_has_array_content();
     content_.array_content_ = array_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.Array.Element.array_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.ArrayPair.Array.Element.array_content)
 }
 
 inline bool Tuple_Body_ArrayPair_Array_Element::has_content() const {
@@ -2084,36 +2639,44 @@ Tuple_Body_ArrayPair_Array::element() const {
 
 // optional string key = 1;
 inline void Tuple_Body_ArrayPair::clear_key() {
-  key_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  key_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple_Body_ArrayPair::key() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.ArrayPair.key)
-  return key_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple_Body_ArrayPair::set_key(const ::std::string& value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.ArrayPair.key)
 }
 inline void Tuple_Body_ArrayPair::set_key(const char* value) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.ArrayPair.key)
 }
-inline void Tuple_Body_ArrayPair::set_key(const char* value, size_t size) {
+inline void Tuple_Body_ArrayPair::set_key(const char* value,
+    size_t size) {
   
-  key_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  key_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.ArrayPair.key)
 }
 inline ::std::string* Tuple_Body_ArrayPair::mutable_key() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.Body.ArrayPair.key)
-  return key_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple_Body_ArrayPair::release_key() {
   
-  return key_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return key_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple_Body_ArrayPair::unsafe_arena_release_key() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return key_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple_Body_ArrayPair::set_allocated_key(::std::string* key) {
   if (key != NULL) {
@@ -2121,7 +2684,20 @@ inline void Tuple_Body_ArrayPair::set_allocated_key(::std::string* key) {
   } else {
     
   }
-  key_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key);
+  key_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), key,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.key)
+}
+inline void Tuple_Body_ArrayPair::unsafe_arena_set_allocated_key(
+    ::std::string* key) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (key != NULL) {
+    
+  } else {
+    
+  }
+  key_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      key, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.ArrayPair.key)
 }
 
@@ -2140,19 +2716,29 @@ inline const ::Tuple_Body_ArrayPair_Array& Tuple_Body_ArrayPair::value() const {
 inline ::Tuple_Body_ArrayPair_Array* Tuple_Body_ArrayPair::mutable_value() {
   
   if (value_ == NULL) {
-    value_ = new ::Tuple_Body_ArrayPair_Array;
+    _slow_mutable_value();
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.ArrayPair.value)
   return value_;
 }
 inline ::Tuple_Body_ArrayPair_Array* Tuple_Body_ArrayPair::release_value() {
   
-  ::Tuple_Body_ArrayPair_Array* temp = value_;
-  value_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_value();
+  } else {
+    ::Tuple_Body_ArrayPair_Array* temp = value_;
+    value_ = NULL;
+    return temp;
+  }
 }
-inline void Tuple_Body_ArrayPair::set_allocated_value(::Tuple_Body_ArrayPair_Array* value) {
-  delete value_;
+inline  void Tuple_Body_ArrayPair::set_allocated_value(::Tuple_Body_ArrayPair_Array* value) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete value_;
+  }
+  if (value != NULL) {
+    _slow_set_allocated_value(message_arena, &value);
+  }
   value_ = value;
   if (value) {
     
@@ -2175,25 +2761,26 @@ inline void Tuple_Body::set_has_string_content() {
 }
 inline void Tuple_Body::clear_string_content() {
   if (has_string_content()) {
-    content_.string_content_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    content_.string_content_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        GetArenaNoVirtual());
     clear_has_content();
   }
 }
 inline const ::std::string& Tuple_Body::string_content() const {
   // @@protoc_insertion_point(field_get:Tuple.Body.string_content)
   if (has_string_content()) {
-    return content_.string_content_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    return content_.string_content_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
   return *&::google::protobuf::internal::GetEmptyStringAlreadyInited();
 }
 inline void Tuple_Body::set_string_content(const ::std::string& value) {
-  // @@protoc_insertion_point(field_set:Tuple.Body.string_content)
   if (!has_string_content()) {
     clear_content();
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  content_.string_content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  content_.string_content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.Body.string_content)
 }
 inline void Tuple_Body::set_string_content(const char* value) {
@@ -2202,18 +2789,20 @@ inline void Tuple_Body::set_string_content(const char* value) {
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  content_.string_content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(value));
+  content_.string_content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(value), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.Body.string_content)
 }
-inline void Tuple_Body::set_string_content(const char* value, size_t size) {
+inline void Tuple_Body::set_string_content(const char* value,
+                             size_t size) {
   if (!has_string_content()) {
     clear_content();
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
-  content_.string_content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
-      reinterpret_cast<const char*>(value), size));
+  content_.string_content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size),
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.Body.string_content)
 }
 inline ::std::string* Tuple_Body::mutable_string_content() {
@@ -2222,13 +2811,25 @@ inline ::std::string* Tuple_Body::mutable_string_content() {
     set_has_string_content();
     content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   }
+  return content_.string_content_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_mutable:Tuple.Body.string_content)
-  return content_.string_content_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline ::std::string* Tuple_Body::release_string_content() {
   if (has_string_content()) {
     clear_has_content();
-    return content_.string_content_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+    return content_.string_content_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+        GetArenaNoVirtual());
+  } else {
+    return NULL;
+  }
+}
+inline ::std::string* Tuple_Body::unsafe_arena_release_string_content() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (has_string_content()) {
+    clear_has_content();
+    return content_.string_content_.UnsafeArenaRelease(
+        &::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   } else {
     return NULL;
   }
@@ -2240,8 +2841,20 @@ inline void Tuple_Body::set_allocated_string_content(::std::string* string_conte
   clear_content();
   if (string_content != NULL) {
     set_has_string_content();
-    content_.string_content_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-        string_content);
+    content_.string_content_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), string_content,
+        GetArenaNoVirtual());
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.string_content)
+}
+inline void Tuple_Body::unsafe_arena_set_allocated_string_content(::std::string* string_content) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (!has_string_content()) {
+    content_.string_content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  }
+  clear_content();
+  if (string_content) {
+    set_has_string_content();
+    content_.string_content_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), string_content, GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_set_allocated:Tuple.Body.string_content)
 }
@@ -2255,7 +2868,9 @@ inline void Tuple_Body::set_has_tuple_content() {
 }
 inline void Tuple_Body::clear_tuple_content() {
   if (has_tuple_content()) {
-    delete content_.tuple_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.tuple_content_;
+    }
     clear_has_content();
   }
 }
@@ -2269,12 +2884,50 @@ inline ::Tuple* Tuple_Body::mutable_tuple_content() {
   if (!has_tuple_content()) {
     clear_content();
     set_has_tuple_content();
-    content_.tuple_content_ = new ::Tuple;
+    content_.tuple_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.tuple_content)
   return content_.tuple_content_;
 }
 inline ::Tuple* Tuple_Body::release_tuple_content() {
+  if (has_tuple_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple* temp = new ::Tuple;
+      temp->MergeFrom(*content_.tuple_content_);
+      content_.tuple_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple* temp = content_.tuple_content_;
+      content_.tuple_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_tuple_content(::Tuple* tuple_content) {
+  clear_content();
+  if (tuple_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(tuple_content) == NULL) {
+      GetArenaNoVirtual()->Own(tuple_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(tuple_content)) {
+      ::Tuple* new_tuple_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple >(
+          GetArenaNoVirtual());
+      new_tuple_content->CopyFrom(*tuple_content);
+      tuple_content = new_tuple_content;
+    }
+    set_has_tuple_content();
+    content_.tuple_content_ = tuple_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.tuple_content)
+}
+inline  ::Tuple* Tuple_Body::unsafe_arena_release_tuple_content() {
   if (has_tuple_content()) {
     clear_has_content();
     ::Tuple* temp = content_.tuple_content_;
@@ -2284,13 +2937,13 @@ inline ::Tuple* Tuple_Body::release_tuple_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_tuple_content(::Tuple* tuple_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_tuple_content(::Tuple* tuple_content) {
   clear_content();
   if (tuple_content) {
     set_has_tuple_content();
     content_.tuple_content_ = tuple_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.tuple_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.tuple_content)
 }
 
 // optional .Tuple.Body.StringPair string_pair_content = 3;
@@ -2302,7 +2955,9 @@ inline void Tuple_Body::set_has_string_pair_content() {
 }
 inline void Tuple_Body::clear_string_pair_content() {
   if (has_string_pair_content()) {
-    delete content_.string_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.string_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2316,12 +2971,50 @@ inline ::Tuple_Body_StringPair* Tuple_Body::mutable_string_pair_content() {
   if (!has_string_pair_content()) {
     clear_content();
     set_has_string_pair_content();
-    content_.string_pair_content_ = new ::Tuple_Body_StringPair;
+    content_.string_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_StringPair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.string_pair_content)
   return content_.string_pair_content_;
 }
 inline ::Tuple_Body_StringPair* Tuple_Body::release_string_pair_content() {
+  if (has_string_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_StringPair* temp = new ::Tuple_Body_StringPair;
+      temp->MergeFrom(*content_.string_pair_content_);
+      content_.string_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_StringPair* temp = content_.string_pair_content_;
+      content_.string_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_string_pair_content(::Tuple_Body_StringPair* string_pair_content) {
+  clear_content();
+  if (string_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(string_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(string_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(string_pair_content)) {
+      ::Tuple_Body_StringPair* new_string_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_StringPair >(
+          GetArenaNoVirtual());
+      new_string_pair_content->CopyFrom(*string_pair_content);
+      string_pair_content = new_string_pair_content;
+    }
+    set_has_string_pair_content();
+    content_.string_pair_content_ = string_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.string_pair_content)
+}
+inline  ::Tuple_Body_StringPair* Tuple_Body::unsafe_arena_release_string_pair_content() {
   if (has_string_pair_content()) {
     clear_has_content();
     ::Tuple_Body_StringPair* temp = content_.string_pair_content_;
@@ -2331,13 +3024,13 @@ inline ::Tuple_Body_StringPair* Tuple_Body::release_string_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_string_pair_content(::Tuple_Body_StringPair* string_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_string_pair_content(::Tuple_Body_StringPair* string_pair_content) {
   clear_content();
   if (string_pair_content) {
     set_has_string_pair_content();
     content_.string_pair_content_ = string_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.string_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.string_pair_content)
 }
 
 // optional .Tuple.Body.IntPair int_pair_content = 4;
@@ -2349,7 +3042,9 @@ inline void Tuple_Body::set_has_int_pair_content() {
 }
 inline void Tuple_Body::clear_int_pair_content() {
   if (has_int_pair_content()) {
-    delete content_.int_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.int_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2363,12 +3058,50 @@ inline ::Tuple_Body_IntPair* Tuple_Body::mutable_int_pair_content() {
   if (!has_int_pair_content()) {
     clear_content();
     set_has_int_pair_content();
-    content_.int_pair_content_ = new ::Tuple_Body_IntPair;
+    content_.int_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_IntPair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.int_pair_content)
   return content_.int_pair_content_;
 }
 inline ::Tuple_Body_IntPair* Tuple_Body::release_int_pair_content() {
+  if (has_int_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_IntPair* temp = new ::Tuple_Body_IntPair;
+      temp->MergeFrom(*content_.int_pair_content_);
+      content_.int_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_IntPair* temp = content_.int_pair_content_;
+      content_.int_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_int_pair_content(::Tuple_Body_IntPair* int_pair_content) {
+  clear_content();
+  if (int_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(int_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(int_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(int_pair_content)) {
+      ::Tuple_Body_IntPair* new_int_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_IntPair >(
+          GetArenaNoVirtual());
+      new_int_pair_content->CopyFrom(*int_pair_content);
+      int_pair_content = new_int_pair_content;
+    }
+    set_has_int_pair_content();
+    content_.int_pair_content_ = int_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.int_pair_content)
+}
+inline  ::Tuple_Body_IntPair* Tuple_Body::unsafe_arena_release_int_pair_content() {
   if (has_int_pair_content()) {
     clear_has_content();
     ::Tuple_Body_IntPair* temp = content_.int_pair_content_;
@@ -2378,13 +3111,13 @@ inline ::Tuple_Body_IntPair* Tuple_Body::release_int_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_int_pair_content(::Tuple_Body_IntPair* int_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_int_pair_content(::Tuple_Body_IntPair* int_pair_content) {
   clear_content();
   if (int_pair_content) {
     set_has_int_pair_content();
     content_.int_pair_content_ = int_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.int_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.int_pair_content)
 }
 
 // optional .Tuple.Body.DoublePair double_pair_content = 5;
@@ -2396,7 +3129,9 @@ inline void Tuple_Body::set_has_double_pair_content() {
 }
 inline void Tuple_Body::clear_double_pair_content() {
   if (has_double_pair_content()) {
-    delete content_.double_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.double_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2410,12 +3145,50 @@ inline ::Tuple_Body_DoublePair* Tuple_Body::mutable_double_pair_content() {
   if (!has_double_pair_content()) {
     clear_content();
     set_has_double_pair_content();
-    content_.double_pair_content_ = new ::Tuple_Body_DoublePair;
+    content_.double_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_DoublePair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.double_pair_content)
   return content_.double_pair_content_;
 }
 inline ::Tuple_Body_DoublePair* Tuple_Body::release_double_pair_content() {
+  if (has_double_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_DoublePair* temp = new ::Tuple_Body_DoublePair;
+      temp->MergeFrom(*content_.double_pair_content_);
+      content_.double_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_DoublePair* temp = content_.double_pair_content_;
+      content_.double_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_double_pair_content(::Tuple_Body_DoublePair* double_pair_content) {
+  clear_content();
+  if (double_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(double_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(double_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(double_pair_content)) {
+      ::Tuple_Body_DoublePair* new_double_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_DoublePair >(
+          GetArenaNoVirtual());
+      new_double_pair_content->CopyFrom(*double_pair_content);
+      double_pair_content = new_double_pair_content;
+    }
+    set_has_double_pair_content();
+    content_.double_pair_content_ = double_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.double_pair_content)
+}
+inline  ::Tuple_Body_DoublePair* Tuple_Body::unsafe_arena_release_double_pair_content() {
   if (has_double_pair_content()) {
     clear_has_content();
     ::Tuple_Body_DoublePair* temp = content_.double_pair_content_;
@@ -2425,13 +3198,13 @@ inline ::Tuple_Body_DoublePair* Tuple_Body::release_double_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_double_pair_content(::Tuple_Body_DoublePair* double_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_double_pair_content(::Tuple_Body_DoublePair* double_pair_content) {
   clear_content();
   if (double_pair_content) {
     set_has_double_pair_content();
     content_.double_pair_content_ = double_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.double_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.double_pair_content)
 }
 
 // optional .Tuple.Body.BoolPair bool_pair_content = 6;
@@ -2443,7 +3216,9 @@ inline void Tuple_Body::set_has_bool_pair_content() {
 }
 inline void Tuple_Body::clear_bool_pair_content() {
   if (has_bool_pair_content()) {
-    delete content_.bool_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.bool_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2457,12 +3232,50 @@ inline ::Tuple_Body_BoolPair* Tuple_Body::mutable_bool_pair_content() {
   if (!has_bool_pair_content()) {
     clear_content();
     set_has_bool_pair_content();
-    content_.bool_pair_content_ = new ::Tuple_Body_BoolPair;
+    content_.bool_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_BoolPair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.bool_pair_content)
   return content_.bool_pair_content_;
 }
 inline ::Tuple_Body_BoolPair* Tuple_Body::release_bool_pair_content() {
+  if (has_bool_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_BoolPair* temp = new ::Tuple_Body_BoolPair;
+      temp->MergeFrom(*content_.bool_pair_content_);
+      content_.bool_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_BoolPair* temp = content_.bool_pair_content_;
+      content_.bool_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_bool_pair_content(::Tuple_Body_BoolPair* bool_pair_content) {
+  clear_content();
+  if (bool_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(bool_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(bool_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(bool_pair_content)) {
+      ::Tuple_Body_BoolPair* new_bool_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_BoolPair >(
+          GetArenaNoVirtual());
+      new_bool_pair_content->CopyFrom(*bool_pair_content);
+      bool_pair_content = new_bool_pair_content;
+    }
+    set_has_bool_pair_content();
+    content_.bool_pair_content_ = bool_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.bool_pair_content)
+}
+inline  ::Tuple_Body_BoolPair* Tuple_Body::unsafe_arena_release_bool_pair_content() {
   if (has_bool_pair_content()) {
     clear_has_content();
     ::Tuple_Body_BoolPair* temp = content_.bool_pair_content_;
@@ -2472,13 +3285,13 @@ inline ::Tuple_Body_BoolPair* Tuple_Body::release_bool_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_bool_pair_content(::Tuple_Body_BoolPair* bool_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_bool_pair_content(::Tuple_Body_BoolPair* bool_pair_content) {
   clear_content();
   if (bool_pair_content) {
     set_has_bool_pair_content();
     content_.bool_pair_content_ = bool_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.bool_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.bool_pair_content)
 }
 
 // optional .Tuple.Body.TuplePair tuple_pair_content = 7;
@@ -2490,7 +3303,9 @@ inline void Tuple_Body::set_has_tuple_pair_content() {
 }
 inline void Tuple_Body::clear_tuple_pair_content() {
   if (has_tuple_pair_content()) {
-    delete content_.tuple_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.tuple_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2504,12 +3319,50 @@ inline ::Tuple_Body_TuplePair* Tuple_Body::mutable_tuple_pair_content() {
   if (!has_tuple_pair_content()) {
     clear_content();
     set_has_tuple_pair_content();
-    content_.tuple_pair_content_ = new ::Tuple_Body_TuplePair;
+    content_.tuple_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_TuplePair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.tuple_pair_content)
   return content_.tuple_pair_content_;
 }
 inline ::Tuple_Body_TuplePair* Tuple_Body::release_tuple_pair_content() {
+  if (has_tuple_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_TuplePair* temp = new ::Tuple_Body_TuplePair;
+      temp->MergeFrom(*content_.tuple_pair_content_);
+      content_.tuple_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_TuplePair* temp = content_.tuple_pair_content_;
+      content_.tuple_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_tuple_pair_content(::Tuple_Body_TuplePair* tuple_pair_content) {
+  clear_content();
+  if (tuple_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(tuple_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(tuple_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(tuple_pair_content)) {
+      ::Tuple_Body_TuplePair* new_tuple_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_TuplePair >(
+          GetArenaNoVirtual());
+      new_tuple_pair_content->CopyFrom(*tuple_pair_content);
+      tuple_pair_content = new_tuple_pair_content;
+    }
+    set_has_tuple_pair_content();
+    content_.tuple_pair_content_ = tuple_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.tuple_pair_content)
+}
+inline  ::Tuple_Body_TuplePair* Tuple_Body::unsafe_arena_release_tuple_pair_content() {
   if (has_tuple_pair_content()) {
     clear_has_content();
     ::Tuple_Body_TuplePair* temp = content_.tuple_pair_content_;
@@ -2519,13 +3372,13 @@ inline ::Tuple_Body_TuplePair* Tuple_Body::release_tuple_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_tuple_pair_content(::Tuple_Body_TuplePair* tuple_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_tuple_pair_content(::Tuple_Body_TuplePair* tuple_pair_content) {
   clear_content();
   if (tuple_pair_content) {
     set_has_tuple_pair_content();
     content_.tuple_pair_content_ = tuple_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.tuple_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.tuple_pair_content)
 }
 
 // optional .Tuple.Body.NullPair null_pair_content = 8;
@@ -2537,7 +3390,9 @@ inline void Tuple_Body::set_has_null_pair_content() {
 }
 inline void Tuple_Body::clear_null_pair_content() {
   if (has_null_pair_content()) {
-    delete content_.null_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.null_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2551,12 +3406,50 @@ inline ::Tuple_Body_NullPair* Tuple_Body::mutable_null_pair_content() {
   if (!has_null_pair_content()) {
     clear_content();
     set_has_null_pair_content();
-    content_.null_pair_content_ = new ::Tuple_Body_NullPair;
+    content_.null_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_NullPair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.null_pair_content)
   return content_.null_pair_content_;
 }
 inline ::Tuple_Body_NullPair* Tuple_Body::release_null_pair_content() {
+  if (has_null_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_NullPair* temp = new ::Tuple_Body_NullPair;
+      temp->MergeFrom(*content_.null_pair_content_);
+      content_.null_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_NullPair* temp = content_.null_pair_content_;
+      content_.null_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_null_pair_content(::Tuple_Body_NullPair* null_pair_content) {
+  clear_content();
+  if (null_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(null_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(null_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(null_pair_content)) {
+      ::Tuple_Body_NullPair* new_null_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_NullPair >(
+          GetArenaNoVirtual());
+      new_null_pair_content->CopyFrom(*null_pair_content);
+      null_pair_content = new_null_pair_content;
+    }
+    set_has_null_pair_content();
+    content_.null_pair_content_ = null_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.null_pair_content)
+}
+inline  ::Tuple_Body_NullPair* Tuple_Body::unsafe_arena_release_null_pair_content() {
   if (has_null_pair_content()) {
     clear_has_content();
     ::Tuple_Body_NullPair* temp = content_.null_pair_content_;
@@ -2566,13 +3459,13 @@ inline ::Tuple_Body_NullPair* Tuple_Body::release_null_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_null_pair_content(::Tuple_Body_NullPair* null_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_null_pair_content(::Tuple_Body_NullPair* null_pair_content) {
   clear_content();
   if (null_pair_content) {
     set_has_null_pair_content();
     content_.null_pair_content_ = null_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.null_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.null_pair_content)
 }
 
 // optional .Tuple.Body.ArrayPair array_pair_content = 9;
@@ -2584,7 +3477,9 @@ inline void Tuple_Body::set_has_array_pair_content() {
 }
 inline void Tuple_Body::clear_array_pair_content() {
   if (has_array_pair_content()) {
-    delete content_.array_pair_content_;
+    if (GetArenaNoVirtual() == NULL) {
+      delete content_.array_pair_content_;
+    }
     clear_has_content();
   }
 }
@@ -2598,12 +3493,50 @@ inline ::Tuple_Body_ArrayPair* Tuple_Body::mutable_array_pair_content() {
   if (!has_array_pair_content()) {
     clear_content();
     set_has_array_pair_content();
-    content_.array_pair_content_ = new ::Tuple_Body_ArrayPair;
+    content_.array_pair_content_ = 
+      ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_ArrayPair >(
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(field_mutable:Tuple.Body.array_pair_content)
   return content_.array_pair_content_;
 }
 inline ::Tuple_Body_ArrayPair* Tuple_Body::release_array_pair_content() {
+  if (has_array_pair_content()) {
+    clear_has_content();
+    if (GetArenaNoVirtual() != NULL) {
+      ::Tuple_Body_ArrayPair* temp = new ::Tuple_Body_ArrayPair;
+      temp->MergeFrom(*content_.array_pair_content_);
+      content_.array_pair_content_ = NULL;
+      return temp;
+    } else {
+      ::Tuple_Body_ArrayPair* temp = content_.array_pair_content_;
+      content_.array_pair_content_ = NULL;
+      return temp;
+    }
+  } else {
+    return NULL;
+  }
+}
+inline void Tuple_Body::set_allocated_array_pair_content(::Tuple_Body_ArrayPair* array_pair_content) {
+  clear_content();
+  if (array_pair_content) {
+    if (GetArenaNoVirtual() != NULL &&
+        ::google::protobuf::Arena::GetArena(array_pair_content) == NULL) {
+      GetArenaNoVirtual()->Own(array_pair_content);
+    } else if (GetArenaNoVirtual() !=
+               ::google::protobuf::Arena::GetArena(array_pair_content)) {
+      ::Tuple_Body_ArrayPair* new_array_pair_content = 
+          ::google::protobuf::Arena::CreateMessage< ::Tuple_Body_ArrayPair >(
+          GetArenaNoVirtual());
+      new_array_pair_content->CopyFrom(*array_pair_content);
+      array_pair_content = new_array_pair_content;
+    }
+    set_has_array_pair_content();
+    content_.array_pair_content_ = array_pair_content;
+  }
+  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.array_pair_content)
+}
+inline  ::Tuple_Body_ArrayPair* Tuple_Body::unsafe_arena_release_array_pair_content() {
   if (has_array_pair_content()) {
     clear_has_content();
     ::Tuple_Body_ArrayPair* temp = content_.array_pair_content_;
@@ -2613,13 +3546,13 @@ inline ::Tuple_Body_ArrayPair* Tuple_Body::release_array_pair_content() {
     return NULL;
   }
 }
-inline void Tuple_Body::set_allocated_array_pair_content(::Tuple_Body_ArrayPair* array_pair_content) {
+inline  void Tuple_Body::unsafe_arena_set_allocated_array_pair_content(::Tuple_Body_ArrayPair* array_pair_content) {
   clear_content();
   if (array_pair_content) {
     set_has_array_pair_content();
     content_.array_pair_content_ = array_pair_content;
   }
-  // @@protoc_insertion_point(field_set_allocated:Tuple.Body.array_pair_content)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Tuple.Body.array_pair_content)
 }
 
 inline bool Tuple_Body::has_content() const {
@@ -2637,36 +3570,44 @@ inline Tuple_Body::ContentCase Tuple_Body::content_case() const {
 
 // optional string tag = 1;
 inline void Tuple::clear_tag() {
-  tag_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  tag_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Tuple::tag() const {
   // @@protoc_insertion_point(field_get:Tuple.tag)
-  return tag_.GetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return tag_.Get(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 inline void Tuple::set_tag(const ::std::string& value) {
   
-  tag_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  tag_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Tuple.tag)
 }
 inline void Tuple::set_tag(const char* value) {
   
-  tag_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  tag_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Tuple.tag)
 }
-inline void Tuple::set_tag(const char* value, size_t size) {
+inline void Tuple::set_tag(const char* value,
+    size_t size) {
   
-  tag_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  tag_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Tuple.tag)
 }
 inline ::std::string* Tuple::mutable_tag() {
   
   // @@protoc_insertion_point(field_mutable:Tuple.tag)
-  return tag_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return tag_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Tuple::release_tag() {
   
-  return tag_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return tag_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Tuple::unsafe_arena_release_tag() {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return tag_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Tuple::set_allocated_tag(::std::string* tag) {
   if (tag != NULL) {
@@ -2674,7 +3615,20 @@ inline void Tuple::set_allocated_tag(::std::string* tag) {
   } else {
     
   }
-  tag_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), tag);
+  tag_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), tag,
+      GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_allocated:Tuple.tag)
+}
+inline void Tuple::unsafe_arena_set_allocated_tag(
+    ::std::string* tag) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (tag != NULL) {
+    
+  } else {
+    
+  }
+  tag_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      tag, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Tuple.tag)
 }
 
@@ -2724,6 +3678,20 @@ inline const ::google::protobuf::RepeatedPtrField< ::Tuple_Body >&
 Tuple::body() const {
   // @@protoc_insertion_point(field_list:Tuple.body)
   return body_;
+}
+
+// optional bool poison = 4;
+inline void Tuple::clear_poison() {
+  poison_ = false;
+}
+inline bool Tuple::poison() const {
+  // @@protoc_insertion_point(field_get:Tuple.poison)
+  return poison_;
+}
+inline void Tuple::set_poison(bool value) {
+  
+  poison_ = value;
+  // @@protoc_insertion_point(field_set:Tuple.poison)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

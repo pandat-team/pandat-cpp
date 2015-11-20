@@ -1,8 +1,10 @@
 #include <queue>
 #include "rapidjson/document.h"
 #include "pirf/pirf.pb.h"
+#include "readerwriterqueue/readerwriterqueue.h"
 
 using namespace rapidjson;
+using namespace moodycamel;
 
 template <typename ARRAY>
 void encode_array(ARRAY *array, Tuple::Body::ArrayPair::Array *dest_array);
@@ -138,13 +140,16 @@ void encode_array(ARRAY *array, Tuple::Body::ArrayPair::Array *dest_array){
 
 }
 
-void encode(std::istream &in, std::queue<Tuple> &out) {
+void encode(std::istream &in, BlockingReaderWriterQueue<Tuple> &out) {
         Document document;
         Tuple tuple;
         for (std::string line; std::getline(in, line);) {
                 document.Parse(line.c_str());
                 encode_tuple(&document, &tuple);
-                out.push(tuple);
+                out.enqueue(tuple);
                 tuple.Clear();
         }
+        tuple.set_poison(true);
+        out.enqueue(tuple);
+
 }

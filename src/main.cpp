@@ -1,19 +1,25 @@
 #include <iostream> 
 #include <string>
 #include <queue>
+#include <atomic>
+#include <thread>
+#include "readerwriterqueue/readerwriterqueue.h"
 #include "read/json.h"
 #include "write/csv.h"
 
-int main(){
-        std::queue<Tuple> out;
-        encode(std::cin, out);
-        decode(out, std::cout);
-        /*
-        for (std::string line; std::getline(std::cin, line);) {
-                Tuple t = encode(line.c_str());
-                std::cout << decode() << std::endl;
+using namespace moodycamel;
 
-                std::cout << encode(line.c_str()).DebugString() << std::endl;
-        }*/
+int main(){
+        BlockingReaderWriterQueue<Tuple> out(100);
+        std::thread writer([&]() {
+                        decode(out, std::cout);
+
+                        });
+        std::thread reader([&]() {
+                        encode(std::cin, out);
+
+                        });
+        writer.join();
+        reader.join();
         return 0;
 }

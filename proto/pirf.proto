@@ -1,5 +1,6 @@
 // Pandat Internal Representation Format (pirf)
 syntax = "proto3";
+option cc_enable_arenas = true;
 message Tuple {
         message Body {
                 enum Null {
@@ -35,11 +36,11 @@ message Tuple {
                                         oneof content {
                                                 string string_content = 1;
                                                 Tuple tuple_content = 2;
-                                                int64 int_content = 4;
-                                                double double_content = 5;
-                                                bool bool_content = 6;
-                                                Null null_content = 7;
-                                                Array array_content = 8;
+                                                int64 int_content = 3;
+                                                double double_content = 4;
+                                                bool bool_content = 5;
+                                                Null null_content = 6;
+                                                Array array_content = 7;
                                         }
 
                                 }
@@ -63,4 +64,5 @@ message Tuple {
         string tag = 1;
         map<string, string> attr = 2;
         repeated Body body = 3;
+        bool poison = 4;
 }
